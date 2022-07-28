@@ -9,7 +9,7 @@ export const load = async() => {
     const { contractGTO, contractGTOS } = await loadContracts();
     const { ethFunds, transactionCount, tokensSold, ethPriceN, transactions } = await loadVariables(contractGTOS);
     const bal = await contractGTO.balanceOf(account);
-    const myGTO = bal / 10**18;
+    const myGTO = bal / 10**2;
     return { account, contractGTOS, contractGTO, ethFunds, transactionCount, tokensSold, ethPriceN, transactions, myGTO };
 };
 
